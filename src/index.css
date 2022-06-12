@@ -1,0 +1,209 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+@import url("https://fonts.googleapis.com/css2?family=Changa+One&display=swap");
+.header {
+  width: 100%;
+  background: linear-gradient(90deg, #8d33ff 30.73%, #ed8dfd 76.04%, rgba(255, 205, 147, 0.9) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: inline-block;
+  padding: 10px 30px;
+  font-family: "Changa One";
+  font-size: 29px;
+  line-height: 1.5em;
+  color: #ffffff;
+}
+
+.nav {
+  padding: 10px 30px;
+}
+.nav > img {
+  width: 25px;
+}
+
+/* PortfolioContainer */
+.PortfolioContainer {
+  padding: 60px 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* PortfolioItem */
+.PortfolioItem {
+  display: block;
+  width: 100%;
+  margin: 0 0 60px 0;
+}
+
+.PortfolioItem > a > img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .PortfolioItem {
+    display: block;
+    width: calc((100% - 30px) / 2);
+    margin: 0 30px 60px 0;
+  }
+  .PortfolioItem:nth-child(3n) {
+    margin: 0 30px 60px 0;
+  }
+  .PortfolioItem:nth-child(2n) {
+    margin: 0 0 60px 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .PortfolioItem {
+    display: block;
+    width: calc((100% - 60px) / 3);
+    margin: 0 30px 60px 0;
+  }
+  .PortfolioItem:nth-child(2n) {
+    margin: 0 30px 60px 0;
+  }
+  .PortfolioItem:nth-child(3n) {
+    margin: 0 0 60px 0;
+  }
+}
+
+.ItemBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work-detail,
+.work-like {
+  display: flex;
+  align-items: center;
+}
+.work-detail > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.work-like > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.ItemDetail {
+  display: flex;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1em;
+  border: 1px solid black;
+  flex-direction: column;
+}
+.work-box {
+  width: 100%;
+  height: 50%;
+  background-color: #cbcbcb;
+  border-radius: 1em 1em 0em 0em;
+}
+.work-box2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.work-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.work-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 100%;
+}
+.msg {
+  display: block;
+  border-bottom: 1px solid black;
+}
+
+@media only screen and (min-width: 768px) {
+  .ItemDetail {
+    flex-direction: row;
+  }
+  .work-box {
+    width: 70%;
+    height: 100%;
+    border-radius: 1em 0em 0em 1em;
+  }
+  .work-box2 {
+    width: 30%;
+  }
+  .work-name {
+    border-top: 0px solid black;
+  }
+}
+
+/* btn */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+}
+.prev {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 5%;
+  color: #cbcbcb;
+}
+.next {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 95%;
+  color: #cbcbcb;
+}
+.close {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  color: #cbcbcb;
+}
+.form-btn {
+  background-color: #cbcbcb;
+  border: none;
+  border-radius: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
